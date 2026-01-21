@@ -1,5 +1,3 @@
-# Source: r2-ue-compose/templates/compose.yaml
-
 services:
   gateway:
     depends_on:

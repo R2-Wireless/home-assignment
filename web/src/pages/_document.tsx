@@ -6,9 +6,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="/R2_logo01-1.png" />
+          <link rel="icon" href="/r2-white.svg" />
           <div className="logo">
-            <Image src="/r2_svg.svg" alt="R2 Logo" width={90} height={90} />
+            <Image src="/r2-white.svg" alt="R2 Logo" width={90} height={90} />
           </div>
         </Head>
         <body>

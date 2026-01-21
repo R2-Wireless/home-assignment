@@ -14,7 +14,7 @@ The website consits of a login page, and a homepage, where in the homepage you c
 You'll be completing the `backend` side of this project, since the website is already built.
 
 ### Phase 1
-* Add a real backend instead of the `be-demo` (which runs using `nginx`), use whatever high-level programming language (garbage collected memory) as you'd like, such as `Node.js`, `Python`, `C#` and etc.  
+* Add a real backend instead of the `be-demo` (which runs using `nginx`), use whatever high-level programming language (garbage collected memory) as you'd like, such as `Java`, `GO`, `C#` and etc.  
 Call it `be-high-level`.
 * Whatever programming language you chose, connect the backend to the rest of the app by creating a `Docker` image of that backend, and make the necessary changes to the `docker compose` so they will work together.  
 * The backend should implment a rest-api that has 3 endpoints:
@@ -46,12 +46,12 @@ Call it `be-high-level`.
     If token is valid, calculate whatever the user won or lost (next bullet point) and store in memory whatever won or lost.  
 * Win calculation  
   Win with chance of `0.7`, but when 30 wins happend in that day, drop to  `0.4`.
-* Running the [docker command](#how-to-run) should make your project run, make sure all changes are committed to your `master` branch.
+* Running the [docker command](#how-to-run) should make your project run, make sure all changes are committed to your `master\main` branch.
 
 
 ### Phase 2
 * Make a branch called `low-level`, and make sure all changes from this phase are commited to that branch.
-* Repeat phase 1, but use whatever low-level programming language (manual memory management) as you'd like, such as `C`, `C++`, `Rust`, `Zig` and etc.  
+* Repeat phase 1, but use whatever low-level programming language (manual memory management) as you'd like, such as `Rust`, `C`, `C++` and etc.  
 Call it `be-low-level`.
 
 ### Phase 3
@@ -60,5 +60,5 @@ Call it `be-low-level`.
   * Change API to use `swagger` or something else entirely.  
   * Add CI that checks formatting, linting, typing, tests using `github-actions` or something else.
   * Improve `Dockerfile` to use `multistage builds`.  
-  * Use `cache layer` such as `redis` to store and update wins and loses.  
+  * Use some `cache layer` to store and update wins and loses.  
 

@@ -81,12 +81,16 @@ const Dashboard = () => {
                 "Authorization": `Bearer ${t}`
             }
         });
-        const jRes = await response.json();
-    
-        if (jRes === "OK") {
-            localStorage.removeItem("token");
-            router.push('/login');
+
+        if (response.ok) {
+            console.log('Logout successful.');
+        } else if (response.status === 401) {
+            console.log('Unauthorized. Please login again.');
+        } else {
+            console.log(`Unexpected response status: ${response.status}`);
         }
+        localStorage.removeItem("token");
+        router.push('/login');
     };
     
     
